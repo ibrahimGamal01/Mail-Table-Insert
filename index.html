@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        th {
+            border-top: 1px solid #ddd;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            td, th {
+                padding: 12px;
+            }
+        }
+
+        @media screen and (min-width: 576px) and (max-width: 767px) {
+            td, th {
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 575px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr { 
+                margin: 0 0 1rem 0;
+                background: #f2f2f2; /* Add background color for better separation */
+                border-bottom: 1px solid #ddd;
+            }
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 0;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold; /* Make header text bold for better readability */
+            }
+            td:nth-of-type(1):before { content: "First Header"; }
+            td:nth-of-type(2):before { content: "Second Header"; }
+            td:nth-of-type(3):before { content: "Third Header"; }
+            td:nth-of-type(4):before { content: "Fourth Header"; }
+            td:nth-of-type(5):before { content: "Fifth Header"; }
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellpadding="15" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="border: 1px solid #ddd;">First Header</th>
+                <th style="border: 1px solid #ddd;">Second Header</th>
+                <th style="border: 1px solid #ddd;">Third Header</th>
+                <th style="border: 1px solid #ddd;">Fourth Header</th>
+                <th style="border: 1px solid #ddd;">Fifth Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #ddd;">Row 1, Cell 1</td>
+                <td style="border: 1px solid #ddd;">Row 1, Cell 2</td>
+                <td style="border: 1px solid #ddd;">Row 1, Cell 3</td>
+                <td style="border: 1px solid #ddd;">Row 1, Cell 4</td>
+                <td style="border: 1px solid #ddd;">Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd;">Row 2, Cell 1</td>
+                <td style="border: 1px solid #ddd;">Row 2, Cell 2</td>
+                <td style="border: 1px solid #ddd;">Row 2, Cell 3</td>
+                <td style="border: 1px solid #ddd;">Row 2, Cell 4</td>
+                <td style="border: 1px solid #ddd;">Row 2, Cell 5</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd;">Row 3, Cell 1</td>
+                <td style="border: 1px solid #ddd;">Row 3, Cell 2</td>
+                <td style="border: 1px solid #ddd;">Row 3, Cell 3</td>
+                <td style="border: 1px solid #ddd;">Row 3, Cell 4</td>
+                <td style="border: 1px solid #ddd;">Row 3, Cell 5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
